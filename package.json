@@ -1,7 +1,7 @@
 {
   "name": "social-media-2",
   "version": "0.1.0",
-  "homepage":"https://rohit.parakh.github.io/social-media",
+  "homepage":"https://rohitparakh.github.io/social-media",
 
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
