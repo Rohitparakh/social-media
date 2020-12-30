@@ -1,9 +1,16 @@
+import { NavLink } from 'react-router-dom';
 import React, { useState } from 'react'
 
 const LeftSidebar=()=>{
     var [leftSidebar, setleftSidebar] = useState(true)
     var leftSidebarClass=(leftSidebar==true)?"fixed-sidebar":"fixed-sidebar open";
-    const setLeftToggle=()=>{setleftSidebar(!leftSidebar)}
+	const setLeftToggle=()=>{setleftSidebar(!leftSidebar)}
+	
+	var [leftSidebarMobile, setleftSidebarMobile] = useState(true)
+    var leftSidebarClassMobile=(leftSidebarMobile==true)?"fixed-sidebar fixed-sidebar-responsive":"fixed-sidebar fixed-sidebar-responsive open";
+	const setLeftToggleMobile=()=>{setleftSidebarMobile(!leftSidebarMobile)}
+	
+
     return(
         <>
          {/* Fixed Sidebar Left */}
@@ -182,10 +189,10 @@ const LeftSidebar=()=>{
 
 {/* <!-- Fixed Sidebar Left --> */}
 
-<div className="fixed-sidebar fixed-sidebar-responsive">
+<div className={leftSidebarClassMobile}>
 
 	<div className="fixed-sidebar-left sidebar--small" id="sidebar-left-responsive">
-		<a href="#" className="logo js-sidebar-open">
+		<a href="#" onClick={setLeftToggleMobile} className="logo js-sidebar-open">
 			<img src="img/logo.png" alt="Ro'Codes"/>
 		</a>
 
@@ -211,9 +218,9 @@ const LeftSidebar=()=>{
 					</div>
 					<a href="02-ProfilePage.html" className="author-name fn">
 						<div className="author-title">
-							James Spiegel <svg className="olymp-dropdown-arrow-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use></svg>
+							Rohit Parakh <svg className="olymp-dropdown-arrow-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use></svg>
 						</div>
-						<span className="author-subtitle">SPACE COWBOY</span>
+						<span className="author-subtitle">Professional Cricketer</span>
 					</a>
 				</div>
 			</div>
@@ -224,7 +231,7 @@ const LeftSidebar=()=>{
 
 			<ul className="left-menu">
 				<li>
-					<a href="#" className="js-sidebar-open">
+					<a href="#" onClick={setLeftToggleMobile} className="js-sidebar-open">
 						<svg className="olymp-close-icon left-menu-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
 						<span className="left-menu-title">Collapse Menu</span>
 					</a>
@@ -350,6 +357,7 @@ const LeftSidebar=()=>{
 		</div>
 	</div>
 </div>
+
 </>
     )
 }

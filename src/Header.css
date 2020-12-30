@@ -1,0 +1,16 @@
+.header-icons-content{
+    width: 100%;
+    left: 0;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+.header-icons-content .header-pane{
+    background-color: #fff;
+    display: none;
+}
+
+.header-icons-content>.active {
+    display: block !important;
+}

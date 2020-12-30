@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import React, { useState } from 'react'
 
 const MainContent=()=>{
@@ -144,7 +145,7 @@ const MainContent=()=>{
                 <div className="author-date">
                     <a className="h6 post__author-name fn" href="#">Marina Valentine</a> shared a <a href="#">link</a>
                     <div className="post__date">
-                        <time className="published" datetime="2004-07-24T18:18">
+                        <time className="published" dateTime="2004-07-24T18:18">
                             March 4 at 2:05pm
                         </time>
                     </div>
@@ -275,7 +276,7 @@ const MainContent=()=>{
                 <div className="author-date">
                     <a className="h6 post__author-name fn" href="#">Elaine Dreyfuss</a>
                     <div className="post__date">
-                        <time className="published" datetime="2004-07-24T18:18">
+                        <time className="published" dateTime="2004-07-24T18:18">
                             9 hours ago
                         </time>
                     </div>
@@ -388,7 +389,7 @@ const MainContent=()=>{
                     <div className="author-date">
                         <a className="h6 post__author-name fn" href="02-ProfilePage.html">James Spiegel</a>
                         <div className="post__date">
-                            <time className="published" datetime="2004-07-24T18:18">
+                            <time className="published" dateTime="2004-07-24T18:18">
                                 38 mins ago
                             </time>
                         </div>
@@ -413,7 +414,7 @@ const MainContent=()=>{
                     <div className="author-date">
                         <a className="h6 post__author-name fn" href="#">Mathilda Brinker</a>
                         <div className="post__date">
-                            <time className="published" datetime="2004-07-24T18:18">
+                            <time className="published" dateTime="2004-07-24T18:18">
                                 1 hour ago
                             </time>
                         </div>
@@ -478,7 +479,7 @@ const MainContent=()=>{
                 <div className="author-date">
                     <a className="h6 post__author-name fn" href="#">Green Goo Rock</a>
                     <div className="post__date">
-                        <time className="published" datetime="2004-07-24T18:18">
+                        <time className="published" dateTime="2004-07-24T18:18">
                             March 8 at 6:42pm
                         </time>
                     </div>
@@ -596,7 +597,7 @@ const MainContent=()=>{
                 <div className="author-date">
                     <a className="h6 post__author-name fn" href="#">Sarah Hetfield</a>
                     <div className="post__date">
-                        <time className="published" datetime="2004-07-24T18:18">
+                        <time className="published" dateTime="2004-07-24T18:18">
                             March 2 at 9:06am
                         </time>
                     </div>
@@ -677,7 +678,7 @@ const MainContent=()=>{
                 <div className="author-date">
                     <a className="h6 post__author-name fn" href="#">Nicholas Grissom</a>
                     <div className="post__date">
-                        <time className="published" datetime="2004-07-24T18:18">
+                        <time className="published" dateTime="2004-07-24T18:18">
                             March 2 at 8:34am
                         </time>
                     </div>

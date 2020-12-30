@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import React, { useState } from 'react'
 
 const RightSidebar=()=>{
@@ -5,6 +6,10 @@ const RightSidebar=()=>{
     var [rightSidebar, setrightSidebar] = useState(true)
     var rightSidebarClass=(rightSidebar==true)?"fixed-sidebar right":"fixed-sidebar right open";
     const setRightToggle=()=>{setrightSidebar(!rightSidebar)}
+
+	  var [rightSidebarMobile, setrightSidebarMobile] = useState(true)
+    var rightSidebarClassMobile=(rightSidebarMobile==true)?"fixed-sidebar right fixed-sidebar-responsive":"fixed-sidebar right fixed-sidebar-responsive open";
+    const setRightToggleMobile=()=>{setrightSidebarMobile(!rightSidebarMobile)}
 
 return(
 <>
@@ -89,12 +94,12 @@ return(
 		</div>
 
 		<div className="search-friend inline-items">
-			<a href="#" onClick={setRightToggle} className="js-sidebar-open">
+			<a  onClick={setRightToggle} className="js-sidebar-open">
 				<svg className="olymp-menu-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-menu-icon"></use></svg>
 			</a>
 		</div>
 
-		<a href="#" className="olympus-chat inline-items js-chat-open">
+		<a  className="olympus-chat inline-items js-chat-open">
 			<svg className="olymp-chat---messages-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
 		</a>
 
@@ -105,8 +110,8 @@ return(
 		<div className="mCustomScrollbar" data-mcs-theme="dark">
 
 			<div className="ui-block-title ui-block-title-small">
-				<a href="#" className="title">Close Friends</a>
-				<a href="#">Settings</a>
+				<a  className="title">Close Friends</a>
+				<a >Settings</a>
 			</div>
 
 			<ul className="chat-users">
@@ -118,7 +123,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Carol Summers</a>
+						<a  className="h6 author-name">Carol Summers</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -149,7 +154,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Mathilda Brinker</a>
+						<a  className="h6 author-name">Mathilda Brinker</a>
 						<span className="status">AT WORK!</span>
 					</div>
 
@@ -182,7 +187,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Carol Summers</a>
+						<a  className="h6 author-name">Carol Summers</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -216,7 +221,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Michael Maximoff</a>
+						<a  className="h6 author-name">Michael Maximoff</a>
 						<span className="status">AWAY</span>
 					</div>
 
@@ -250,7 +255,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Rachel Howlett</a>
+						<a  className="h6 author-name">Rachel Howlett</a>
 						<span className="status">OFFLINE</span>
 					</div>
 
@@ -278,8 +283,8 @@ return(
 
 
 			<div className="ui-block-title ui-block-title-small">
-				<a href="#" className="title">MY FAMILY</a>
-				<a href="#">Settings</a>
+				<a  className="title">MY FAMILY</a>
+				<a >Settings</a>
 			</div>
 
 			<ul className="chat-users">
@@ -291,7 +296,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Sarah Hetfield</a>
+						<a  className="h6 author-name">Sarah Hetfield</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -317,8 +322,8 @@ return(
 
 
 			<div className="ui-block-title ui-block-title-small">
-				<a href="#" className="title">UNCATEGORIZED</a>
-				<a href="#">Settings</a>
+				<a  className="title">UNCATEGORIZED</a>
+				<a >Settings</a>
 			</div>
 
 			<ul className="chat-users">
@@ -330,7 +335,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Bruce Peterson</a>
+						<a  className="h6 author-name">Bruce Peterson</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -362,7 +367,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Chris Greyson</a>
+						<a  className="h6 author-name">Chris Greyson</a>
 						<span className="status">AWAY</span>
 					</div>
 
@@ -393,7 +398,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Nicholas Grisom</a>
+						<a  className="h6 author-name">Nicholas Grisom</a>
 						<span className="status">INVISIBLE</span>
 					</div>
 
@@ -423,7 +428,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Chris Greyson</a>
+						<a  className="h6 author-name">Chris Greyson</a>
 						<span className="status">AWAY</span>
 					</div>
 
@@ -453,7 +458,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Bruce Peterson</a>
+						<a  className="h6 author-name">Bruce Peterson</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -488,12 +493,12 @@ return(
 				<svg className="olymp-settings-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-settings-icon"></use></svg>
 			</a>
 
-			<a href="#" onClick={setRightToggle} className="js-sidebar-open">
+			<a  onClick={setRightToggle} className="js-sidebar-open">
 				<svg className="olymp-close-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
 			</a>
 		</div>
 
-		<a href="#" className="olympus-chat inline-items js-chat-open">
+		<a  className="olympus-chat inline-items js-chat-open">
 
 			<h6 className="olympus-chat-title">OLYMPUS CHAT</h6>
 			<svg className="olymp-chat---messages-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
@@ -507,10 +512,10 @@ return(
 
 {/* <!-- Fixed Sidebar Right-Responsive --> */}
 
-<div className="fixed-sidebar right fixed-sidebar-responsive" id="sidebar-right-responsive">
+<div className={rightSidebarClassMobile} id="sidebar-right-responsive">
 
 	<div className="fixed-sidebar-right sidebar--small">
-		<a href="#" className="js-sidebar-open">
+		<a  onClick={setRightToggleMobile} className="js-sidebar-open">
 			<svg className="olymp-menu-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-menu-icon"></use></svg>
 			<svg className="olymp-close-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
 		</a>
@@ -520,8 +525,8 @@ return(
 		<div className="mCustomScrollbar" data-mcs-theme="dark">
 
 			<div className="ui-block-title ui-block-title-small">
-				<a href="#" className="title">Close Friends</a>
-				<a href="#">Settings</a>
+				<a  className="title">Close Friends</a>
+				<a >Settings</a>
 			</div>
 
 			<ul className="chat-users">
@@ -533,7 +538,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Carol Summers</a>
+						<a  className="h6 author-name">Carol Summers</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -564,7 +569,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Mathilda Brinker</a>
+						<a  className="h6 author-name">Mathilda Brinker</a>
 						<span className="status">AT WORK!</span>
 					</div>
 
@@ -597,7 +602,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Carol Summers</a>
+						<a  className="h6 author-name">Carol Summers</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -631,7 +636,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Michael Maximoff</a>
+						<a  className="h6 author-name">Michael Maximoff</a>
 						<span className="status">AWAY</span>
 					</div>
 
@@ -665,7 +670,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Rachel Howlett</a>
+						<a  className="h6 author-name">Rachel Howlett</a>
 						<span className="status">OFFLINE</span>
 					</div>
 
@@ -693,8 +698,8 @@ return(
 
 
 			<div className="ui-block-title ui-block-title-small">
-				<a href="#" className="title">MY FAMILY</a>
-				<a href="#">Settings</a>
+				<a  className="title">MY FAMILY</a>
+				<a >Settings</a>
 			</div>
 
 			<ul className="chat-users">
@@ -706,7 +711,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Sarah Hetfield</a>
+						<a  className="h6 author-name">Sarah Hetfield</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -732,8 +737,8 @@ return(
 
 
 			<div className="ui-block-title ui-block-title-small">
-				<a href="#" className="title">UNCATEGORIZED</a>
-				<a href="#">Settings</a>
+				<a  className="title">UNCATEGORIZED</a>
+				<a >Settings</a>
 			</div>
 
 			<ul className="chat-users">
@@ -745,7 +750,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Bruce Peterson</a>
+						<a  className="h6 author-name">Bruce Peterson</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -777,7 +782,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Chris Greyson</a>
+						<a  className="h6 author-name">Chris Greyson</a>
 						<span className="status">AWAY</span>
 					</div>
 
@@ -808,7 +813,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Nicholas Grisom</a>
+						<a  className="h6 author-name">Nicholas Grisom</a>
 						<span className="status">INVISIBLE</span>
 					</div>
 
@@ -838,7 +843,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Chris Greyson</a>
+						<a  className="h6 author-name">Chris Greyson</a>
 						<span className="status">AWAY</span>
 					</div>
 
@@ -868,7 +873,7 @@ return(
 					</div>
 
 					<div className="author-status">
-						<a href="#" className="h6 author-name">Bruce Peterson</a>
+						<a  className="h6 author-name">Bruce Peterson</a>
 						<span className="status">ONLINE</span>
 					</div>
 
@@ -905,12 +910,12 @@ return(
 				<svg className="olymp-settings-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-settings-icon"></use></svg>
 			</a>
 
-			<a href="#" className="js-sidebar-open">
+			<a  className="js-sidebar-open">
 				<svg className="olymp-close-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
 			</a>
 		</div>
 
-		<a href="#" className="olympus-chat inline-items js-chat-open">
+		<a  className="olympus-chat inline-items js-chat-open">
 
 			<h6 className="olympus-chat-title">OLYMPUS CHAT</h6>
 			<svg className="olymp-chat---messages-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
