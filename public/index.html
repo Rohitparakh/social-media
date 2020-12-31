@@ -101,6 +101,11 @@
 <script defer src="fonts/fontawesome-all.js"></script>
 
 <script src="Bootstrap/dist/js/bootstrap.bundle.js"></script>
-
+<script>
+  $('a[href=""]').click(function(event) {
+    event.preventDefault();
+    console.log("clicked");
+});
+</script>
   </body>
 </html>

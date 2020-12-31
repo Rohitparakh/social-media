@@ -15,7 +15,7 @@ function App() {
     <RightSidebar/>
     <div className="header-spacer"/>
     <Switch>
-  <Route exact path="/" render={()=><NewsFeed/>}/>
+  <Route exact path="/social-media" render={()=><NewsFeed/>}/>
   <Route exact path="/profile" render={()=><Profile/>}/>
 
   </Switch>
