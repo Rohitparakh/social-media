@@ -4448,6 +4448,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   opacity: 1;
   transition-delay: 0s; }
 
+
 .more {
   position: relative;
   transition: all .3s ease;

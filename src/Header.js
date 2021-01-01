@@ -4,6 +4,51 @@ import { NavLink } from 'react-router-dom';
 import {Dropdown} from'react-bootstrap';
 const Header=()=>{	
 
+	const [messageHover,setmessageHover]=useState(true)
+	var messageHoverClass=messageHover?"block":"none";
+
+	const [friendHover,setfriendHover]=useState(true)
+	var friendHoverClass=friendHover?"block":"none";
+
+	const [notificationHover,setnotificationHover]=useState(true)
+	var notificationHoverClass=notificationHover?"block":"none";
+
+	const close=(component)=>{
+switch(component){
+	case "message":
+		setmessageHover(true);
+		break;
+		
+		case "notification":
+		setnotificationHover(true);
+		break;
+		
+		case "friend":
+		setfriendHover(true);
+		break;
+}
+	}
+const closeHeaderDialog=(component)=>{
+
+	switch(component){
+	case "message":
+		setmessageHover(!messageHover)
+		setTimeout(()=>close("message"),1000)
+		break;
+
+	case "friend":
+		setfriendHover(!friendHover)
+		setTimeout(()=>close("friend"),1000)
+		break;
+
+	case "notification":
+		setnotificationHover(!notificationHover)
+		setTimeout(()=>close("notification"),1000)
+		break;
+
+	}
+}
+
 	// Responsive header icons content toggle-messages
 	var [messageIcon, setmessageIcon] = useState(true)
     var messageIconClass=(messageIcon==true)?"nav-link":"nav-link active";
@@ -82,7 +127,7 @@ return(
 				<svg className="olymp-happy-face-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use></svg>
 				<div className="label-avatar bg-blue">6</div>
 
-				<div className="more-dropdown more-with-triangle triangle-top-center">
+				<div style={{display:`${friendHoverClass}`}} className="more-dropdown more-with-triangle triangle-top-center">
 					<div className="ui-block-title ui-block-title-small">
 						<h6 className="title">FRIEND REQUESTS</h6>
 						<a href="#">Find Friends</a>
@@ -195,7 +240,7 @@ return(
 						</ul>
 					</div>
 
-					<NavLink to="/dash/friends" onClick={()=>{setFriendsIconToggle(false)}} className="view-all bg-blue">Check all your Events</NavLink>
+					<NavLink to="/dash/friends" onClick={()=>closeHeaderDialog("friend")} className="view-all bg-blue">Check all your Events</NavLink>
 				</div>
 			</div>
 
@@ -203,7 +248,7 @@ return(
 				<svg className="olymp-chat---messages-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
 				<div className="label-avatar bg-purple">2</div>
 
-				<div className="more-dropdown more-with-triangle triangle-top-center">
+				<div style={{display:`${messageHoverClass}`}} className="more-dropdown more-with-triangle triangle-top-center">
 					<div className="ui-block-title ui-block-title-small">
 						<h6 className="title">Chat / Messages</h6>
 						<a href="#">Mark all as read</a>
@@ -286,7 +331,7 @@ return(
 						</ul>
 					</div>
 
-					<NavLink to="/dash/messages" onClick={()=>{setMessageIconToggle(false)}} className="view-all bg-purple">View All Messages</NavLink>
+					<NavLink to="/dash/messages" onClick={()=>closeHeaderDialog("message")} className="view-all bg-purple">View All Messages</NavLink>
 				</div>
 			</div>
 
@@ -295,7 +340,7 @@ return(
 
 				<div className="label-avatar bg-primary">8</div>
 
-				<div className="more-dropdown more-with-triangle triangle-top-center">
+				<div style={{display:`${notificationHoverClass}`}} className="more-dropdown more-with-triangle triangle-top-center">
 					<div className="ui-block-title ui-block-title-small">
 						<h6 className="title">Notifications</h6>
 						<a href="#">Mark all as read</a>
@@ -401,7 +446,7 @@ return(
 						</ul>
 					</div>
 
-					<NavLink to="/dash/notifications" onClick={()=>{setNotificationIconToggle(false)}} className="view-all bg-primary">View All Notifications</NavLink>
+					<NavLink to="/dash/notifications" onClick={()=>closeHeaderDialog("notification")} className="view-all bg-primary">View All Notifications</NavLink>
 				</div>
 			</div>
 

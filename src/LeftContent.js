@@ -39,8 +39,8 @@ var curDay=days[day]
 
 
 	useEffect(()=>{
-const url=`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=d27e022f94a9b3208ee145f1be09446f`
-// const url=null
+// const url=`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=d27e022f94a9b3208ee145f1be09446f`
+const url=null
 const fetchApi= async()=>{
 	const response= await fetch(url);
 	const resJson=await response.json();
@@ -165,8 +165,8 @@ fetchApi();
 				<div className="w-calendar">
 				<Calendar/>
 
-					<div className="calendar">
-						{/* <header>
+					{/*<div className="calendar">
+						 <header>
 							<h6 className="month">May</h6>
 						</header>
 						<table>
@@ -219,8 +219,8 @@ fetchApi();
 							</tr>
 							</tbody>
 						</table>
-					 */}
-					</div>
+					 
+					</div>*/}
 				</div>
 				
 				
