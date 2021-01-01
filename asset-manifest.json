@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/social-media/static/css/main.10702c43.chunk.css",
-    "main.js": "/social-media/static/js/main.9754a950.chunk.js",
-    "main.js.map": "/social-media/static/js/main.9754a950.chunk.js.map",
-    "runtime-main.js": "/social-media/static/js/runtime-main.5c088035.js",
-    "runtime-main.js.map": "/social-media/static/js/runtime-main.5c088035.js.map",
-    "static/js/2.fe0d0aa9.chunk.js": "/social-media/static/js/2.fe0d0aa9.chunk.js",
-    "static/js/2.fe0d0aa9.chunk.js.map": "/social-media/static/js/2.fe0d0aa9.chunk.js.map",
-    "static/js/3.5d26da3b.chunk.js": "/social-media/static/js/3.5d26da3b.chunk.js",
-    "static/js/3.5d26da3b.chunk.js.map": "/social-media/static/js/3.5d26da3b.chunk.js.map",
-    "index.html": "/social-media/index.html",
-    "static/css/main.10702c43.chunk.css.map": "/social-media/static/css/main.10702c43.chunk.css.map",
-    "static/js/2.fe0d0aa9.chunk.js.LICENSE.txt": "/social-media/static/js/2.fe0d0aa9.chunk.js.LICENSE.txt"
+    "main.css": "/rohitparakh.github.io/social-media/static/css/main.97d1c2e3.chunk.css",
+    "main.js": "/rohitparakh.github.io/social-media/static/js/main.7fc2ac3b.chunk.js",
+    "main.js.map": "/rohitparakh.github.io/social-media/static/js/main.7fc2ac3b.chunk.js.map",
+    "runtime-main.js": "/rohitparakh.github.io/social-media/static/js/runtime-main.236ba50b.js",
+    "runtime-main.js.map": "/rohitparakh.github.io/social-media/static/js/runtime-main.236ba50b.js.map",
+    "static/css/2.681fb70c.chunk.css": "/rohitparakh.github.io/social-media/static/css/2.681fb70c.chunk.css",
+    "static/js/2.5e91ff2f.chunk.js": "/rohitparakh.github.io/social-media/static/js/2.5e91ff2f.chunk.js",
+    "static/js/2.5e91ff2f.chunk.js.map": "/rohitparakh.github.io/social-media/static/js/2.5e91ff2f.chunk.js.map",
+    "static/js/3.d8c18e2c.chunk.js": "/rohitparakh.github.io/social-media/static/js/3.d8c18e2c.chunk.js",
+    "static/js/3.d8c18e2c.chunk.js.map": "/rohitparakh.github.io/social-media/static/js/3.d8c18e2c.chunk.js.map",
+    "index.html": "/rohitparakh.github.io/social-media/index.html",
+    "static/css/2.681fb70c.chunk.css.map": "/rohitparakh.github.io/social-media/static/css/2.681fb70c.chunk.css.map",
+    "static/css/main.97d1c2e3.chunk.css.map": "/rohitparakh.github.io/social-media/static/css/main.97d1c2e3.chunk.css.map",
+    "static/js/2.5e91ff2f.chunk.js.LICENSE.txt": "/rohitparakh.github.io/social-media/static/js/2.5e91ff2f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5c088035.js",
-    "static/js/2.fe0d0aa9.chunk.js",
-    "static/css/main.10702c43.chunk.css",
-    "static/js/main.9754a950.chunk.js"
+    "static/js/runtime-main.236ba50b.js",
+    "static/css/2.681fb70c.chunk.css",
+    "static/js/2.5e91ff2f.chunk.js",
+    "static/css/main.97d1c2e3.chunk.css",
+    "static/js/main.7fc2ac3b.chunk.js"
   ]
 }

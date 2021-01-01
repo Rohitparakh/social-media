@@ -11259,7 +11259,8 @@ ol ol li {
   .w-wethear svg {
     fill: #fff; }
   .w-wethear .climate {
-    font-size: 18px; }
+    font-size: 18px;
+  text-transform:capitalize; }
   .w-wethear .wethear-now {
     margin-top: 10px; }
   .w-wethear .wethear-now-description span {
