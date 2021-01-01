@@ -2,7 +2,7 @@ import './Header.css'
 import React, { useState} from 'react'
 import { NavLink } from 'react-router-dom';
 import {Dropdown} from'react-bootstrap';
-const Header=()=>{
+const Header=()=>{	
 
 	// Responsive header icons content toggle-messages
 	var [messageIcon, setmessageIcon] = useState(true)
@@ -195,7 +195,7 @@ return(
 						</ul>
 					</div>
 
-					<a href="#" className="view-all bg-blue">Check all your Events</a>
+					<NavLink to="/dash/friends" onClick={()=>{setFriendsIconToggle(false)}} className="view-all bg-blue">Check all your Events</NavLink>
 				</div>
 			</div>
 
@@ -286,7 +286,7 @@ return(
 						</ul>
 					</div>
 
-					<a href="#" className="view-all bg-purple">View All Messages</a>
+					<NavLink to="/dash/messages" onClick={()=>{setMessageIconToggle(false)}} className="view-all bg-purple">View All Messages</NavLink>
 				</div>
 			</div>
 
@@ -401,7 +401,7 @@ return(
 						</ul>
 					</div>
 
-					<a href="#" className="view-all bg-primary">View All Notifications</a>
+					<NavLink to="/dash/notifications" onClick={()=>{setNotificationIconToggle(false)}} className="view-all bg-primary">View All Notifications</NavLink>
 				</div>
 			</div>
 
@@ -653,7 +653,7 @@ return(
 					</li>
 				</ul>
 
-				<a href="#" className="view-all bg-purple">View All Messages</a>
+				<NavLink to="/dash/messages" onClick={()=>{setMessageIconToggle(false)}} className="view-all bg-purple">View All Messages</NavLink>
 			</div>
 </div>
 	
@@ -764,7 +764,7 @@ return(
 			</div>
 		</li>
 	</ul>
-	<a href="#" className="view-all bg-blue">Check all your Events</a>
+	<NavLink to="/dash/friends" onClick={()=>{setFriendsIconToggle(false)}} className="view-all bg-blue">Check all your Events</NavLink>
 </div>
 
 </div>
@@ -875,7 +875,7 @@ return(
 </li>
 </ul>
 
-<a href="#" className="view-all bg-primary">View All Notifications</a>
+<NavLink to="/dash/notifications" onClick={()=>{setNotificationIconToggle(false)}} className="view-all bg-primary">View All Notifications</NavLink>
 </div>
 
 </div>

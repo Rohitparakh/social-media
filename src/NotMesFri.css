@@ -1,0 +1,54 @@
+.mobile-app .profile-settings {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+
+            
+.profile-settings {
+    width: 250px;
+    min-height: 100vh;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    -webkit-transform: translateX(-72%);
+            transform: translateX(-72%);
+    z-index: 21;
+    background-color: #fff;
+    transition: all .3s ease;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1); }
+    .profile-settings .fa-angle-left {
+      display: none; }
+    .profile-settings.open {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      z-index: 99; }
+      .profile-settings.open .fa-angle-right {
+        display: none; }
+      .profile-settings.open .fa-angle-left {
+        display: block; }
+      .profile-settings.open .mCustomScrollbar {
+        visibility: visible;
+        opacity: 1; }
+    .profile-settings .ps > .ps__scrollbar-y-rail {
+      opacity: 0;
+      visibility: hidden;
+      z-index: -4444; }
+    .profile-settings .mCustomScrollbar {
+      max-height: calc(100vh - 70px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s ease; }
+
+      @media (max-width: 1024px) {
+        .profile-settings {
+          visibility: visible;
+          opacity: 1; }
+        .responsive-display-none {
+          display: none; } }
+      
+      @media (max-width: 768px) {
+        .profile-settings {
+          -webkit-transform: translateX(-100%);
+                  transform: translateX(-100%); } }
+      

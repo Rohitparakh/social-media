@@ -1,7 +1,21 @@
 import { NavLink } from 'react-router-dom';
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 
 const LeftContent=()=>{
+	
+	const [city,setCity]=useState("chennai")
+const [weather, setWeather] = useState()
+	useEffect(()=>{
+const url="http://api.openweathermap.org/data/2.5/weather?q=chennai&appid=d27e022f94a9b3208ee145f1be09446f"
+const fetchApi= async()=>{
+	const response= await fetch(url);
+	const resJson=await response.json();
+	// console.log(resJson);
+	setWeather(resJson);
+
+}
+fetchApi();
+	})
     return(
         <>
         	<aside className="col col-xl-3 order-xl-1 col-lg-3 order-lg-1  order-md-2 order-sm-2 order-2 col-md-6 col-sm-6 col-12">

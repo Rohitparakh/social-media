@@ -32,9 +32,9 @@ const LeftSidebar=()=>{
 					</a>
 				</li>
 				<li>
-					<a href="03-Newsfeed.html">
+					<NavLink to="/social-media">
 						<svg className="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right"   data-original-title="NEWSFEED"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 				<li>
 					<a href="16-FavPagesFeed.html">
