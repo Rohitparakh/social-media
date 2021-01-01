@@ -1,22 +1,59 @@
+import 'react-calendar/dist/Calendar.css';
 import { NavLink } from 'react-router-dom';
 import React,{useEffect,useState} from 'react'
+import Calendar from 'react-calendar'
 
 const LeftContent=()=>{
 	
 	const [city,setCity]=useState("chennai")
-const [weather, setWeather] = useState()
+const [weather, setWeather] = useState({
+	"main":{
+		"temp": 29,
+		"feels_like":28.5,
+		"temp_min":27,
+		"temp_max": 31,
+
+	},
+	"weather":[
+		{
+		"description":"Partly Cloudy",
+		"icon":"03d"
+	}
+],
+"name":"Chennai",
+"sys":{
+	"country":"IN"
+}
+
+})
+var iconUrl=`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
+
+const date=new Date();
+const months=["January","February","March","April","May","June","July","August","September","October","November","December"]
+var mon=date.getMonth()
+var month=months[mon]
+var curDate=date.getDate()
+const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+var day=date.getDay();
+var curDay=days[day]
+
+
 	useEffect(()=>{
-const url="http://api.openweathermap.org/data/2.5/weather?q=chennai&appid=d27e022f94a9b3208ee145f1be09446f"
+const url=`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=d27e022f94a9b3208ee145f1be09446f`
+// const url=null
 const fetchApi= async()=>{
 	const response= await fetch(url);
 	const resJson=await response.json();
-	// console.log(resJson);
-	setWeather(resJson);
+	if(resJson.cod==200){setWeather(resJson)}
 
 }
 fetchApi();
-	})
-    return(
+// console.log(weather);
+
+	},[city])
+	// console.log(weather);
+
+	return(
         <>
         	<aside className="col col-xl-3 order-xl-1 col-lg-3 order-lg-1  order-md-2 order-sm-2 order-2 col-md-6 col-sm-6 col-12">
 			<div className="ui-block">
@@ -26,20 +63,33 @@ fetchApi();
 				<div className="widget w-wethear">
 					<a href="#" className="more"><svg className="olymp-three-dots-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use></svg></a>
 				
+				{/* {(!weather)?(<p>No Weather Data Found</p>):((weather.cod!=200)?(<p>No Weather Data Found</p>):( */}
+					
 					<div className="wethear-now inline-items">
-						<div className="temperature-sensor">64°</div>
+						<div className="temperature-sensor">
+						 {weather.main.temp}°
+						 </div>
 						<div className="max-min-temperature">
-							<span>58°</span>
-							<span>76°</span>
+							<span>
+								 {weather.main.temp_min}°
+								 </span>
+							<span>
+								 {weather.main.temp_max}°
+								 </span>
 						</div>
 				
-						<svg className="olymp-weather-partly-sunny-icon"><use xlinkHref="svg-icons/sprites/icons-weather.svg#olymp-weather-partly-sunny-icon"></use></svg>
+						{/* <svg className="olymp-weather-partly-sunny-icon"><use xlinkHref="svg-icons/sprites/icons-weather.svg#olymp-weather-partly-sunny-icon"></use></svg> */}
+						<img src={iconUrl} className="olymp-weather-partly-sunny-icon"/>
 					</div>
 				
 					<div className="wethear-now-description">
-						<div className="climate">Partly Sunny</div>
-						<span>Real Feel: <span>67°</span></span>
-						<span>Chance of Rain: <span>49%</span></span>
+						<div className="climate">
+						 {weather.weather[0].description}
+						</div>
+						<span>Real Feel: <span>
+							{weather.main.feels_like}°
+							</span></span>
+						<span>Chance of Rain: <span>{Math.floor(Math.random() * 100)}%</span></span>
 					</div>
 				
 					<ul className="weekly-forecast">
@@ -48,41 +98,41 @@ fetchApi();
 							<div className="day">sun</div>
 							<svg className="olymp-weather-sunny-icon"><use xlinkHref="svg-icons/sprites/icons-weather.svg#olymp-weather-sunny-icon"></use></svg>
 				
-							<div className="temperature-sensor-day">60°</div>
+							<div className="temperature-sensor-day">28°</div>
 						</li>
 				
 						<li>
 							<div className="day">mon</div>
 							<svg className="olymp-weather-partly-sunny-icon"><use xlinkHref="svg-icons/sprites/icons-weather.svg#olymp-weather-partly-sunny-icon"></use></svg>
-							<div className="temperature-sensor-day">58°</div>
+							<div className="temperature-sensor-day">30°</div>
 						</li>
 				
 						<li>
 							<div className="day">tue</div>
 							<svg className="olymp-weather-cloudy-icon"><use xlinkHref="svg-icons/sprites/icons-weather.svg#olymp-weather-cloudy-icon"></use></svg>
 				
-							<div className="temperature-sensor-day">67°</div>
+							<div className="temperature-sensor-day">29°</div>
 						</li>
 				
 						<li>
 							<div className="day">wed</div>
 							<svg className="olymp-weather-rain-icon"><use xlinkHref="svg-icons/sprites/icons-weather.svg#olymp-weather-rain-icon"></use></svg>
 				
-							<div className="temperature-sensor-day">70°</div>
+							<div className="temperature-sensor-day">32°</div>
 						</li>
 				
 						<li>
 							<div className="day">thu</div>
 							<svg className="olymp-weather-storm-icon"><use xlinkHref="svg-icons/sprites/icons-weather.svg#olymp-weather-storm-icon"></use></svg>
 				
-							<div className="temperature-sensor-day">58°</div>
+							<div className="temperature-sensor-day">27°</div>
 						</li>
 				
 						<li>
 							<div className="day">fri</div>
 							<svg className="olymp-weather-snow-icon"><use xlinkHref="svg-icons/sprites/icons-weather.svg#olymp-weather-snow-icon"></use></svg>
 				
-							<div className="temperature-sensor-day">68°</div>
+							<div className="temperature-sensor-day">25°</div>
 						</li>
 				
 						<li>
@@ -90,15 +140,18 @@ fetchApi();
 				
 							<svg className="olymp-weather-wind-icon-header"><use xlinkHref="svg-icons/sprites/icons-weather.svg#olymp-weather-wind-icon-header"></use></svg>
 				
-							<div className="temperature-sensor-day">65°</div>
+							<div className="temperature-sensor-day">24°</div>
 						</li>
 				
 					</ul>
 				
 					<div className="date-and-place">
-						<h5 className="date">Saturday, March 26th</h5>
-						<div className="place">San Francisco, CA</div>
+						<h5 className="date">{curDay}, {month} {curDate}</h5>
+						<div className="place">{weather.name}, {weather.sys.country}</div>
 					</div>
+				
+				{/* ))} */}
+				
 				
 				</div>
 				
@@ -110,8 +163,10 @@ fetchApi();
 				{/* <!-- W-Calendar --> */}
 				
 				<div className="w-calendar">
+				<Calendar/>
+
 					<div className="calendar">
-						<header>
+						{/* <header>
 							<h6 className="month">May</h6>
 						</header>
 						<table>
@@ -164,6 +219,7 @@ fetchApi();
 							</tr>
 							</tbody>
 						</table>
+					 */}
 					</div>
 				</div>
 				
