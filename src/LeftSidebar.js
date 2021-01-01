@@ -9,6 +9,7 @@ const LeftSidebar=()=>{
 	var [leftSidebarMobile, setleftSidebarMobile] = useState(true)
     var leftSidebarClassMobile=(leftSidebarMobile==true)?"fixed-sidebar fixed-sidebar-responsive":"fixed-sidebar fixed-sidebar-responsive open";
 	const setLeftToggleMobile=()=>{setleftSidebarMobile(!leftSidebarMobile)}
+	const closeSidebarMobile=()=>setLeftToggleMobile(true)
 	
 
     return(
@@ -18,82 +19,83 @@ const LeftSidebar=()=>{
 <div className={leftSidebarClass}>
 	<div className="fixed-sidebar-left sidebar--small" id="sidebar-left">
 
-		<a href="02-ProfilePage.html" className="logo">
+		<NavLink to="/social-media" className="logo">
 			<div className="img-wrap">
 				<img src="img/logo.png" alt="Ro'Codes"/>
 			</div>
-		</a>
+		</NavLink>
 
 		<div className="mCustomScrollbar" data-mcs-theme="dark">
 			<ul className="left-menu">
 				<li>
-					<a onClick={setLeftToggle} className="js-sidebar-open">
+					<a href="#" onClick={setLeftToggle} className="js-sidebar-open">
 						<svg className="olymp-menu-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="OPEN MENU"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-menu-icon"></use></svg>
 					</a>
 				</li>
 				<li>
-					<NavLink to="/social-media">
+					<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right"   data-original-title="NEWSFEED"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use></svg>
 					</NavLink>
 				</li>
 				<li>
-					<a href="16-FavPagesFeed.html">
+
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="FAV PAGE"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-star-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="17-FriendGroups.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-happy-faces-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="FRIEND GROUPS"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-happy-faces-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="18-MusicAndPlaylists.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-headphones-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="MUSIC&PLAYLISTS"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-headphones-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="19-WeatherWidget.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-weather-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="WEATHER APP"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-weather-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="20-CalendarAndEvents-MonthlyCalendar.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-calendar-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="CALENDAR AND EVENTS"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-calendar-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="24-CommunityBadges.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-badge-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Community Badges"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-badge-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="25-FriendsBirthday.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-cupcake-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Friends Birthdays"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-cupcake-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="26-Statistics.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-stats-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Account Stats"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-stats-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="27-ManageWidgets.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-manage-widgets-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Manage Widgets"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-manage-widgets-icon"></use></svg>
-					</a>
+					</NavLink>
 				</li>
 			</ul>
 		</div>
 	</div>
 
 	<div className="fixed-sidebar-left sidebar--large" id="sidebar-left-1">
-		<a href="02-ProfilePage.html" className="logo">
+	<NavLink to="/social-media" className="logo">
 			<div className="img-wrap">
 				<img src="img/logo.png" alt="Ro'Codes"/>
 			</div>
 			<div className="title-block">
 				<h6 className="logo-title">Ro'Codes</h6>
 			</div>
-		</a>
+		</NavLink>
 
 		<div className="mCustomScrollbar" data-mcs-theme="dark">
 			<ul className="left-menu">
@@ -104,64 +106,66 @@ const LeftSidebar=()=>{
 					</a>
 				</li>
 				<li>
-					<a href="03-Newsfeed.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
+
 						<svg className="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right"   data-original-title="NEWSFEED"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use></svg>
 						<span className="left-menu-title">Newsfeed</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="16-FavPagesFeed.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
+
 						<svg className="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="FAV PAGE"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-star-icon"></use></svg>
 						<span className="left-menu-title">Fav Pages Feed</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="17-FriendGroups.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-happy-faces-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="FRIEND GROUPS"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-happy-faces-icon"></use></svg>
 						<span className="left-menu-title">Friend Groups</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="18-MusicAndPlaylists.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-headphones-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="MUSIC&PLAYLISTS"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-headphones-icon"></use></svg>
 						<span className="left-menu-title">Music & Playlists</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="19-WeatherWidget.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-weather-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="WEATHER APP"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-weather-icon"></use></svg>
 						<span className="left-menu-title">Weather App</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="20-CalendarAndEvents-MonthlyCalendar.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-calendar-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="CALENDAR AND EVENTS"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-calendar-icon"></use></svg>
 						<span className="left-menu-title">Calendar and Events</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="24-CommunityBadges.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-badge-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Community Badges"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-badge-icon"></use></svg>
 						<span className="left-menu-title">Community Badges</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="25-FriendsBirthday.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-cupcake-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Friends Birthdays"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-cupcake-icon"></use></svg>
 						<span className="left-menu-title">Friends Birthdays</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="26-Statistics.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-stats-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Account Stats"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-stats-icon"></use></svg>
 						<span className="left-menu-title">Account Stats</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="27-ManageWidgets.html">
+				<NavLink onClick={setLeftToggle} to="/social-media">
 						<svg className="olymp-manage-widgets-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Manage Widgets"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-manage-widgets-icon"></use></svg>
 						<span className="left-menu-title">Manage Widgets</span>
-					</a>
+					</NavLink>
 				</li>
 			</ul>
 
@@ -177,7 +181,8 @@ const LeftSidebar=()=>{
 					</div>
 				</div>
 
-				<span>Complete <a href="#">your profile</a> so people can know more about you!</span>
+				<span>Complete<NavLink onClick={closeSidebarMobile} to="/social-media">your profile</NavLink>
+				 so people can know more about you!</span>
 
 			</div>
 		</div>
@@ -216,12 +221,12 @@ const LeftSidebar=()=>{
 						<img alt="author" src="img/author-page.jpg" className="avatar"/>
 						<span className="icon-status online"></span>
 					</div>
-					<a href="02-ProfilePage.html" className="author-name fn">
+					<NavLink onClick={closeSidebarMobile} to="/" className="author-name fn">
 						<div className="author-title">
 							Rohit Parakh <svg className="olymp-dropdown-arrow-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use></svg>
 						</div>
 						<span className="author-subtitle">Professional Cricketer</span>
-					</a>
+					</NavLink>
 				</div>
 			</div>
 
@@ -229,7 +234,7 @@ const LeftSidebar=()=>{
 				<h6 className="title">MAIN SECTIONS</h6>
 			</div>
 
-			<ul className="left-menu">
+			<ul className="left-menu mobile">
 				<li>
 					<a href="#" onClick={setLeftToggleMobile} className="js-sidebar-open">
 						<svg className="olymp-close-icon left-menu-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
@@ -237,64 +242,73 @@ const LeftSidebar=()=>{
 					</a>
 				</li>
 				<li>
-					<a href="mobile-index.html">
+					<NavLink onClick={closeSidebarMobile} to="/social-media">
 						<svg className="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right"   data-original-title="NEWSFEED"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use></svg>
 						<span className="left-menu-title">Newsfeed</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="Mobile-28-YourAccount-PersonalInformation.html">
+				
+				<NavLink onClick={closeSidebarMobile} to="/social-media">
 						<svg className="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="FAV PAGE"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-star-icon"></use></svg>
 						<span className="left-menu-title">Fav Pages Feed</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="mobile-29-YourAccount-AccountSettings.html">
+			
+				<NavLink onClick={closeSidebarMobile} to="/social-media">
 						<svg className="olymp-happy-faces-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="FRIEND GROUPS"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-happy-faces-icon"></use></svg>
 						<span className="left-menu-title">Friend Groups</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="Mobile-30-YourAccount-ChangePassword.html">
+
+				<NavLink onClick={closeSidebarMobile} to="/social-media">
 						<svg className="olymp-headphones-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="MUSIC&PLAYLISTS"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-headphones-icon"></use></svg>
 						<span className="left-menu-title">Music & Playlists</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="Mobile-31-YourAccount-HobbiesAndInterests.html">
+				
+				<NavLink onClick={closeSidebarMobile} to="/social-media">
 						<svg className="olymp-weather-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="WEATHER APP"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-weather-icon"></use></svg>
 						<span className="left-menu-title">Weather App</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="Mobile-32-YourAccount-EducationAndEmployement.html">
+				
+				<NavLink onClick={closeSidebarMobile} to="/social-media">
 						<svg className="olymp-calendar-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="CALENDAR AND EVENTS"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-calendar-icon"></use></svg>
 						<span className="left-menu-title">Calendar and Events</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="Mobile-33-YourAccount-Notifications.html">
+					
+				<NavLink onClick={closeSidebarMobile} to="/social-media">
 						<svg className="olymp-badge-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Community Badges"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-badge-icon"></use></svg>
 						<span className="left-menu-title">Community Badges</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="Mobile-34-YourAccount-ChatMessages.html">
+				
+				<NavLink onClick={closeSidebarMobile} to="/social-media">
 						<svg className="olymp-cupcake-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Friends Birthdays"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-cupcake-icon"></use></svg>
 						<span className="left-menu-title">Friends Birthdays</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="Mobile-35-YourAccount-FriendsRequests.html">
+					
+				<NavLink onClick={closeSidebarMobile} to="/social-media">
 						<svg className="olymp-stats-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Account Stats"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-stats-icon"></use></svg>
 						<span className="left-menu-title">Account Stats</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="#">
+				
+				<NavLink onClick={closeSidebarMobile} to="/social-media">	
 						<svg className="olymp-manage-widgets-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Manage Widgets"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-manage-widgets-icon"></use></svg>
 						<span className="left-menu-title">Manage Widgets</span>
-					</a>
+					</NavLink>
 				</li>
 			</ul>
 
@@ -304,26 +318,29 @@ const LeftSidebar=()=>{
 
 			<ul className="account-settings">
 				<li>
-					<a href="#">
+										<NavLink onClick={closeSidebarMobile} to="/social-media">
+
 
 						<svg className="olymp-menu-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-menu-icon"></use></svg>
 
 						<span>Profile Settings</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="#">
+										<NavLink onClick={closeSidebarMobile} to="/social-media">
+
 						<svg className="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="FAV PAGE"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-star-icon"></use></svg>
 
 						<span>Create Fav Page</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="#">
+										<NavLink onClick={closeSidebarMobile} to="/social-media">
+
 						<svg className="olymp-logout-icon"><use xlinkHref="svg-icons/sprites/icons.svg#olymp-logout-icon"></use></svg>
 
 						<span>Log Out</span>
-					</a>
+					</NavLink>
 				</li>
 			</ul>
 
@@ -333,24 +350,28 @@ const LeftSidebar=()=>{
 
 			<ul className="about-olympus">
 				<li>
-					<a href="#">
+										<NavLink onClick={closeSidebarMobile} to="/social-media">
+
 						<span>Terms and Conditions</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="#">
+										<NavLink onClick={closeSidebarMobile} to="/social-media">
+
 						<span>FAQs</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="#">
+										<NavLink onClick={closeSidebarMobile} to="/social-media">
+
 						<span>Careers</span>
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="#">
+										<NavLink onClick={closeSidebarMobile} to="/social-media">
+
 						<span>Contact</span>
-					</a>
+					</NavLink>
 				</li>
 			</ul>
 

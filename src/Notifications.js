@@ -16,7 +16,7 @@ const Notifications=()=>{
 				<ul className="notification-list">
 					<li>
 						<div className="author-thumb">
-							<img src="/img/avatar1-sm.jpg" alt="author"/>
+							<img src="./img/avatar1-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							<a href="#" className="h6 notification-friend">Mathilda Brinker</a> commented on your new <a href="#" className="notification-link">profile status</a>.
@@ -34,7 +34,7 @@ const Notifications=()=>{
 				
 					<li className="un-read">
 						<div className="author-thumb">
-							<img src="/img/avatar2-sm.jpg" alt="author"/>
+							<img src="./img/avatar2-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							You and <a href="#" className="h6 notification-friend">Nicholas Grissom</a> just became friends. Write on <a href="#" className="notification-link">his wall</a>.
@@ -52,7 +52,7 @@ const Notifications=()=>{
 				
 					<li className="with-comment-photo">
 						<div className="author-thumb">
-							<img src="/img/avatar3-sm.jpg" alt="author"/>
+							<img src="./img/avatar3-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							<a href="#" className="h6 notification-friend">Sarah Hetfield</a> commented on your <a href="#" className="notification-link">photo</a>.
@@ -63,7 +63,7 @@ const Notifications=()=>{
 											</span>
 				
 						<div className="comment-photo">
-							<img src="/img/comment-photo.jpg" alt="photo"/>
+							<img src="./img/comment-photo.jpg" alt="photo"/>
 							<span>“She looks incredible in that outfit! We should see each...”</span>
 						</div>
 						<div className="more">
@@ -74,7 +74,7 @@ const Notifications=()=>{
 				
 					<li>
 						<div className="author-thumb">
-							<img src="/img/avatar4-sm.jpg" alt="author"/>
+							<img src="./img/avatar4-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							<a href="#" className="h6 notification-friend">Chris Greyson</a> liked your <a href="#" className="notification-link">profile status</a>.
@@ -91,7 +91,7 @@ const Notifications=()=>{
 				
 					<li>
 						<div className="author-thumb">
-							<img src="/img/avatar5-sm.jpg" alt="author"/>
+							<img src="./img/avatar5-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							<a href="#" className="h6 notification-friend">Green Goo Rock</a> invited you to attend to his event Goo in <a href="#" className="notification-link">Gotham Bar</a>.
@@ -109,7 +109,7 @@ const Notifications=()=>{
 				
 					<li>
 						<div className="author-thumb">
-							<img src="/img/avatar6-sm.jpg" alt="author"/>
+							<img src="./img/avatar6-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							<a href="#" className="h6 notification-friend">James Summers</a> commented on your new <a href="#" className="notification-link">profile status</a>.
@@ -127,7 +127,7 @@ const Notifications=()=>{
 				
 					<li>
 						<div className="author-thumb">
-							<img src="/img/avatar7-sm.jpg" alt="author"/>
+							<img src="./img/avatar7-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							<a href="#" className="h6 notification-friend">Marina Valentine</a> commented on your new <a href="#" className="notification-link">profile status</a>.

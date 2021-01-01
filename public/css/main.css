@@ -4132,6 +4132,9 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 
 .left-menu {
   padding: 20px 0; }
+  .mobile {
+    padding:0 !important;
+  }
   .left-menu .left-menu-title {
     transition: all .3s ease;
     font-weight: 700; }

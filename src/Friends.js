@@ -16,7 +16,7 @@ const Friends=()=>{
 				<ul className="notification-list friend-requests">
 					<li>
 						<div className="author-thumb">
-							<img src="/img/avatar15-sm.jpg" alt="author"/>
+							<img src="./img/avatar15-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							<a href="#" className="h6 notification-friend">Tamara Romanoff</a>
@@ -46,7 +46,7 @@ const Friends=()=>{
 				
 					<li>
 						<div className="author-thumb">
-							<img src="/img/avatar16-sm.jpg" alt="author"/>
+							<img src="./img/avatar16-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							<a href="#" className="h6 notification-friend">Tony Stevens</a>
@@ -76,7 +76,7 @@ const Friends=()=>{
 				
 					<li className="accepted">
 						<div className="author-thumb">
-							<img src="/img/avatar17-sm.jpg" alt="author"/>
+							<img src="./img/avatar17-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							You and <a href="#" className="h6 notification-friend">Mary Jane Stark</a> just became friends. Write on <a href="#" className="notification-link">his wall</a>.
@@ -93,7 +93,7 @@ const Friends=()=>{
 				
 					<li>
 						<div className="author-thumb">
-							<img src="/img/avatar18-sm.jpg" alt="author"/>
+							<img src="./img/avatar18-sm.jpg" alt="author"/>
 						</div>
 						<div className="notification-event">
 							<a href="#" className="h6 notification-friend">Stagg Clothing</a>
